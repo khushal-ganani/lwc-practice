@@ -1,0 +1,28 @@
+<template>
+  <lightning-card icon-name="standard:account" variant="base">
+    <div slot="title">
+      Related Contacts
+    </div>
+    <div slot="actions">
+      <lightning-button 
+        variant="brand"
+        label="Refresh" 
+        title="Refresh the related Contacts datatable" 
+        type="button"
+        onclick={handleRefresh} 
+        stretch="false" 
+      ></lightning-button>
+    </div>
+    <div>
+      <template if:true={contacts}>
+        <lightning-datatable
+          key-field="Id"
+          columns={columns}
+          data={contacts}
+          onsave={handleSave}
+          draft-values={draftValues}
+        ></lightning-datatable>
+      </template>
+    </div>
+  </lightning-card>
+</template>

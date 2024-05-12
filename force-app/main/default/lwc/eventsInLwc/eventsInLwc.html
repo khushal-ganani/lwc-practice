@@ -1,0 +1,27 @@
+<template>
+    <div class="main-container slds-var-m-horizontal_medium">
+    <lightning-card icon-name="standard:account" variant="base">
+      <div slot="title">
+          Child Sender 
+      </div>
+      <div class="slds-var-m-around_medium container">
+
+        <lightning-input 
+          type="text" 
+          label="Enter some text"
+          class="slds-var-m-vertical_medium"
+          onchange={handleChange}
+        ></lightning-input>
+
+        <lightning-button 
+          variant="brand"
+          label="Click Me" 
+          title="Click this to dispatch an event" 
+          type="button"
+          onclick={handleClick} 
+          class=""
+        ></lightning-button>
+      </div>
+    </lightning-card>
+    </div>
+</template>

@@ -1,0 +1,34 @@
+<template>
+    <lightning-card icon-name="standard:account" variant="base">
+        <div slot="title">
+            Client Side Sorting in Datatable
+        </div>
+        <div slot="actions">
+            <lightning-button 
+                variant="base"
+                label="Refresh" 
+                title="Refresh the Datatatable"
+                type="button"
+                onclick={handleClick} 
+                class=""
+            ></lightning-button>
+        </div>
+        <div slot="footer">
+            <p>This is an example for sorting in <code>lightning-datatable</code> using <b>client side sorting</b>. This way is usually preferred in case we are displaying or working on <b>small number of records</b> like 50</p>
+        </div>
+        <div class="slds-var-m-around_medium">
+            <template if:true={contacts}>
+                <lightning-datatable
+                    key-field="id"
+                    column-widths-mode=auto
+                    columns={columns}
+                    data={contacts}
+                    default-sort-direction={defaultSortDirection}
+                    onsort={onSort}
+                    sorted-by={sortedBy}
+                    sorted-direction={sortDirection}
+                ></lightning-datatable>
+            </template>
+        </div>
+    </lightning-card>
+</template>

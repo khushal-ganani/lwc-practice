@@ -1,0 +1,25 @@
+<template>
+    <lightning-card icon-name="standard:account" variant="base">
+      <div slot="title">
+          Record View Form
+      </div>
+      
+      <div slot="footer">
+        <p>This is a basic <code>lightning-record-view-form</code> used to display a particular record</p>
+      </div>
+      <div class="slds-var-m-around_medium">
+        <lightning-record-view-form
+          density="compact"
+          object-api-name={objectApiName}
+          record-id={recordId}
+        >
+          <template lwc:if={fields} for:each={fields} for:item="field">
+              <div key={field.fieldApiName}>
+                <lightning-output-field field-name={field.fieldApiName}></lightning-output-field>
+              </div>
+          </template>
+        </lightning-record-view-form>
+        
+      </div>
+    </lightning-card>
+</template>

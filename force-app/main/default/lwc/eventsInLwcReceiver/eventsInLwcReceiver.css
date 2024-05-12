@@ -1,0 +1,16 @@
+.main-container {
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-message {
+    font-size: large;
+    color: red;
+    font-weight: bolder;
+}

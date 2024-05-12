@@ -1,0 +1,15 @@
+<template>
+  <lightning-card icon-name="standard:account" variant="base">
+    <div slot="title">
+      Basic Datatable to display Accounts
+    </div>
+    
+    <div>
+      <lightning-datatable
+        key-field="id"
+        data={accounts}
+        columns={columns}
+      ></lightning-datatable>
+    </div>
+  </lightning-card>
+</template>

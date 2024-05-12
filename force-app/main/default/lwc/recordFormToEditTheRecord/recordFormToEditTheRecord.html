@@ -1,0 +1,21 @@
+<template>
+    <lightning-card icon-name="standard:account" variant="base">
+      <div slot="title">
+          Record Form to edit the Record
+      </div>
+      <div slot="footer">
+        <p>This is a <code style="color: red;">lightning-record-form</code > for editing the existing record whose <code style="color: red;">recordId</code> is passed using the <code style="color: red;">recordId</code> attribute</p>
+      </div>
+      <div class="slds-var-m-around_medium">
+        <lightning-record-form
+          columns="2"
+          fields={fields}
+          object-api-name={objectApiName}
+          record-id={recordId}
+          mode="edit"
+          onsubmit={handleSubmit}
+          onsuccess={handleSuccess}
+        ></lightning-record-form>
+      </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,19 @@
+<!-- This is a basic read-only lightning-record-form to display the record on the detail page. -->
+<template>
+    <lightning-card icon-name="standard:account" variant="base">
+      <div slot="title">
+          Basic Read Only Record Form
+      </div>
+      <div class="slds-var-m-around_medium">
+        <lightning-record-form
+          columns="1"
+          object-api-name={objectApiName}
+          record-id={recordId}
+          fields={fields}
+          mode="readonly"
+        ></lightning-record-form>
+        <!--! Here note either we can define the fields attribute or the layout attribute NOT both !!   -->
+      </div>
+    </lightning-card>
+    
+</template>

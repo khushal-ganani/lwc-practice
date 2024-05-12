@@ -1,0 +1,20 @@
+<template>
+    <lightning-card icon-name="standard:account" variant="base">
+      <div slot="title">
+          View Records with the Option to Edit
+      </div>
+      
+      <div slot="footer">
+        <p>This is a <code>lightning-record-form</code> for viewing the records and also having the <b>option to edit the records</b> as well</p>
+      </div>
+      <div class="slds-var-m-around_medium">
+        <lightning-record-form
+          columns="2"
+          layout-type="Compact"
+          object-api-name={objectApiName}
+          record-id={recordId}
+          mode="view"
+        ></lightning-record-form>
+      </div>
+    </lightning-card>
+</template>
