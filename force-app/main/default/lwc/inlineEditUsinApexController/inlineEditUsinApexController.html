@@ -1,0 +1,28 @@
+<template>
+    <lightning-card icon-name="standard:account" variant="base">
+      <div slot="title">
+          Inline Edit Using Apex Controller
+      </div>
+      <div slot="actions">
+          <lightning-button 
+            variant="brand"
+            label="Refresh" 
+            title="Refresh the datatable" 
+            type="button"
+            onclick={handleRefresh} 
+          ></lightning-button>
+      </div>
+      <div slot="footer">
+        <p>This is a <code>lightning-datatable</code> with <code>inline edit</code> functionality using the apex controller to edit the records</p>
+      </div>
+      <div class="slds-var-m-around_medium">
+        <lightning-datatable
+          key-field="Id"
+          columns={columns}
+          data={contacts}
+          onsave={handleSave}
+          draft-values={draftValues}
+        ></lightning-datatable>
+      </div>
+    </lightning-card>
+</template>

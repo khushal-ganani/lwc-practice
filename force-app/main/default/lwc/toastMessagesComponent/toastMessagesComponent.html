@@ -1,0 +1,37 @@
+<template>
+    <lightning-card icon-name="standard:account" variant="base">
+      <div slot="title">
+          Toast Notifications (Q4)
+      </div>
+      <div slot="footer">
+        <p>This is a component which has three buttons for each type of toast notification in salesforce</p>
+      </div>
+      <div>
+        <div class="container">
+            <lightning-button 
+              variant="success"
+              label="Success" 
+              title="Success Toast Message" 
+              type="button"
+              onclick={handleClick} 
+            ></lightning-button>
+
+            <lightning-button 
+              variant="destructive"
+              label="Error" 
+              title="Error Toast Message" 
+              type="button"
+              onclick={handleClick} 
+            ></lightning-button>
+
+            <lightning-button 
+              variant="destructive-text"
+              label="Warning" 
+              title="Warning Toast Message" 
+              type="button"
+              onclick={handleClick} 
+            ></lightning-button>
+        </div>
+      </div>
+    </lightning-card>
+</template>
