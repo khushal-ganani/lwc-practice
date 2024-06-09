@@ -1,7 +1,7 @@
 import { LightningElement, api, wire } from 'lwc';
 
 import getContactsRelatedToAccount from '@salesforce/apex/contactController.getContactsRelatedToAccount';
-import updateContacts from '@salesforce/apex/contactController.updateContacts';
+import updateContacts from '@salesforce/apex/ContactController.updateContacts';
 
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
@@ -46,7 +46,7 @@ export default class InlineEditUsinApexController extends LightningElement {
         console.log('draft-values: ', updateDraftValues);
 
         // Prepare the record IDs for notifyRecordUpdateAvailable()
-        const notifyChangeIds = updatedFields.map(row => { return { "recordId": row.Id } });
+        const notifyChangeIds = updateDraftValues.map(row => { return { "recordId": row.Id } });
 
         try {
             const result = await updateContacts({ updatedData: updateDraftValues });
@@ -68,8 +68,8 @@ export default class InlineEditUsinApexController extends LightningElement {
             notifyRecordUpdateAvailable(notifyChangeIds);
 
             await refreshApex(this.contactRefreshProperty);
-            console.log('refresh apex finished executing');
             this.draftValues = [];
+            console.log('refresh apex finished executing');
         } catch(error) {
             console.log('InlineEditUsingApexController apex result error: ', error);
             this.draftValues = updateDraftValues;

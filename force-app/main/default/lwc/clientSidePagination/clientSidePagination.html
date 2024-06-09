@@ -1,0 +1,39 @@
+<template>
+    <lightning-card icon-name="standard:account" variant="base">
+        <div slot="title">
+            Client Side Sorting in LWC
+        </div>
+        <div slot="actions">
+            <lightning-button 
+                variant="base"
+                label="Button Label" 
+                title="Looks like a link" 
+                type="button"
+                onclick={handleClick} 
+            ></lightning-button>
+        </div>
+        <div slot="footer">
+            <p>This is an example of client side (Browser JS) pagination in LWC</p>
+        </div>
+        <div class="slds-var-m-around_medium">
+            <div class="slds-var-m-bottom_medium">
+                <lightning-datatable
+                    key-field="id"
+                    hide-checkbox-column
+                    show-row-number-column
+                    columns={columns}
+                    data={data}
+                    row-number-offset={rowOffset}
+                ></lightning-datatable>
+            </div>
+            <!-- paginator child component to view next or previous page records -->
+            <c-paginator
+                page-number={pageNumber}
+                page-size={pageSize}
+                total-item-count={totalItemCount}
+                onprevious={handlePreviousPage}
+                onnext={handleNextPage}
+            ></c-paginator>
+        </div>
+    </lightning-card>
+</template>
