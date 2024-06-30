@@ -1,0 +1,12 @@
+
+<template>
+  <lightning-card icon-name="standard:account" variant="base">
+    <div slot="title">
+      Parent with 2 child components
+    </div>
+    <div class="slds-var-m-around_medium slds-grid slds-gutters">
+      <c-child-sender onmyevent = {handleMyEvent} class="slds-col"></c-child-sender>
+      <c-child-receiver message = {message} class="slds-col"></c-child-receiver>
+    </div>
+  </lightning-card>
+</template>

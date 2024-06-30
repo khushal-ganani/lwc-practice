@@ -17,16 +17,16 @@ export default class EventsInLwc extends LightningElement {
     messageContext;
 
     handleChange(event){
-        console.log('onchange event on input field : ', event);
+        // console.log('onchange event on input field : ', event);
 
         //*! event.target gives the element on which the event is triggered
-        console.log('event.target on the onchange event on input field', event.target);
+        // console.log('event.target on the onchange event on input field', event.target);
 
         //*! event.currentTarget gives the element on which the event listener is attached
-        console.log('event.currentTarget on the onchange event on input field', event.currentTarget);
+        // console.log('event.currentTarget on the onchange event on input field', event.currentTarget);
 
         //! event.detail gives the data that is inside the event from the element
-        console.log('event.detail on the onchange event on input field', event.detail);
+        // console.log('event.detail on the onchange event on input field', event.detail);
 
         //!Here in this case event.target.value and event.detail.value will give the same output, but target
         //! property will return the HTMLElement and detail will just return the data.

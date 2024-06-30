@@ -1,11 +1,10 @@
 <template>
-    <div class="main-container slds-var-m-horizontal_medium">
-    <lightning-card icon-name="standard:account" variant="base">
+  <div class="main-container slds-var-m-horizontal_medium">
+    <lightning-card icon-name="standard:logging" variant="base">
       <div slot="title">
-          Child Sender 
+        Child Sender 
       </div>
       <div class="slds-var-m-around_medium container">
-
         <lightning-input 
           type="text" 
           label="Enter some text"
@@ -13,15 +12,14 @@
           onchange={handleChange}
         ></lightning-input>
 
-        <lightning-button 
+        <!-- <lightning-button 
           variant="brand"
-          label="Click Me" 
-          title="Click this to dispatch an event" 
+          label="Send Message" 
+          title="Click this to send the message" 
           type="button"
-          onclick={handleClick} 
-          class=""
-        ></lightning-button>
+          onclick={handleClick}
+        ></lightning-button> -->
       </div>
     </lightning-card>
-    </div>
+  </div>
 </template>

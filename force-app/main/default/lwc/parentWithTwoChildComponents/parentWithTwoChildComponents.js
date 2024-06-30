@@ -1,6 +1,7 @@
 import { LightningElement } from 'lwc';
 
 export default class EventsInLwcParent extends LightningElement {
+    
     message;
     handleMyEvent(event) {
         console.log('message: ',event.detail.value);
